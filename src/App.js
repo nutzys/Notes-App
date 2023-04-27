@@ -1,11 +1,14 @@
 import Header from './components/Header';
 import NoteList from './components/NoteList';
+import { NoteProvider } from './store/noteContext';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <NoteList/>
+      <NoteProvider>
+        <Header/>
+        <NoteList/>
+      </NoteProvider>
     </div>
   );
 }
